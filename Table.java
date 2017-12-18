@@ -14,7 +14,7 @@ public class Table {
 	public Table(int nDeck){// table's Constructor
 							
 		ddd=new Deck(nDeck);// instantiated a Deck (nDeck)
-		 ppp=new Player[Maxplayer];// instantiated a Player (4player)  
+	 	 ppp=new Player[Maxplayer];// instantiated a Player (4player)  
 		
 		
 	}
@@ -137,11 +137,11 @@ public class Table {
 			}
 			else if(ppp[i].getTotalValue()>21&&bobo.getTotalValue()>21||ppp[i].getTotalValue()==bobo.getTotalValue())
 			{
-				//player lose
+				//draw
 				System.out.println(",chips have no change! The Chips now is: "+ppp[i].getCurrentChips());
 			}
 			else
-			{	//draw
+			{	//player lose
 				ppp[i].increaseChips( -pos_betArray[i]);
 				System.out.println(", Loss "+pos_betArray[i]+" Chips, the Chips now is: "+ppp[i].getCurrentChips());
 				
